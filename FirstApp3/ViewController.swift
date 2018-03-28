@@ -12,6 +12,8 @@ class ViewController: UIViewController {
 
     @IBOutlet weak var messageLabel: UILabel!
     
+    @IBOutlet weak var messageButton: UIButton!
+    
     var lightOn = true
     
     override func viewDidLoad() {
@@ -28,11 +30,13 @@ class ViewController: UIViewController {
         print("Button Touched")
         if lightOn == true {
             self.messageLabel.text = "White"
-            view.backgroundColor = UIColor.black
+            view.backgroundColor = .white
+            self.messageButton.setTitle("Off", for:.normal)
         }
         else {
             self.messageLabel.text = "Black"
-            view.backgroundColor = UIColor.white
+            view.backgroundColor = .black
+            self.messageButton.setTitle("On",for:.normal)
         }
         lightOn = !lightOn
     }
