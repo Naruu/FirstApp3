@@ -31,7 +31,7 @@ class ViewController: UIViewController {
         updateUI()
         lightOn = !lightOn
     }
-    
+    //Cleaning
     func updateUI(){
         if lightOn == true {
             self.messageLabel.text = "White"
